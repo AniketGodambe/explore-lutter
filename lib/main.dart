@@ -11,12 +11,11 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
       theme: ThemeData(fontFamily: GoogleFonts.lato().fontFamily),
-      initialRoute: "/login",
+      initialRoute: "/",
       routes: {
         "/": (context) => const HomePage(),
         "/login": (context) => const LoginPage(),
