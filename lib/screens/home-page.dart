@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:git_hubdemo/models/catalog.dart';
 import 'package:git_hubdemo/widgets.dart/drawer.dart';
+import 'package:git_hubdemo/widgets.dart/item-widget.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    var days = 21;
-    var name = "Aniket";
+    final dummyList = List.generate(20, (index) => CatalogModels.items[0]);
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -16,14 +17,15 @@ class HomePage extends StatelessWidget {
           style: TextStyle(color: Colors.black),
         ),
       ),
-      body: Center(
-        child: Container(
-          padding: const EdgeInsets.all(20),
-          child: Text(
-            '$name is $days years youg men.  ',
-            style: const TextStyle(fontSize: 20),
-          ),
-        ),
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: ListView.builder(
+            itemCount: dummyList.length,
+            itemBuilder: (context, index) {
+              return ItemWidget(
+                item: dummyList[index],
+              );
+            }),
       ),
       drawer: const MyDrawer(),
     );
