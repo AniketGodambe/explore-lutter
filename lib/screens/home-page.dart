@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:git_hubdemo/screens/drawer.dart';
+import 'package:git_hubdemo/widgets.dart/drawer.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -10,9 +10,11 @@ class HomePage extends StatelessWidget {
     var name = "Aniket";
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.deepPurple,
         centerTitle: true,
-        title: const Text('Git Hub Demo'),
+        title: const Text(
+          'Git Hub Demo',
+          style: TextStyle(color: Colors.black),
+        ),
       ),
       body: Center(
         child: Container(

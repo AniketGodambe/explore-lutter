@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:git_hubdemo/screens/home-page.dart';
 import 'package:git_hubdemo/screens/login-page.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:get/get.dart';
+import 'package:git_hubdemo/widgets.dart/theme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +14,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      theme: ThemeData(fontFamily: GoogleFonts.lato().fontFamily),
+      themeMode: ThemeMode.light,
+      theme: MyTheme.lightTheme(context),
+      darkTheme: ThemeData(brightness: Brightness.dark),
       initialRoute: "/",
       routes: {
         "/": (context) => const HomePage(),
