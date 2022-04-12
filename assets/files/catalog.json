@@ -1,0 +1,25 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "iphone 12",
+            "desc": "12th generation of apple",
+            "price": "$ 999",
+            "image":"assets/iphone12-1.jpg"
+        },
+        {
+            "id": 2,
+            "name": "iphone 12 pro",
+            "desc": "12th generation of apple",
+            "price": "$ 999",
+            "image":"assets/iphone12.jpg"
+        },
+        {
+            "id": 3,
+            "name": "iphone 13",
+            "desc": "12th generation of apple",
+            "price": "$ 999",
+            "image":"assets/iphone13.jpg"
+        }
+    ]
+}
