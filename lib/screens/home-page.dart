@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'dart:convert';
 import 'package:git_hubdemo/models/catalog.dart';
+import 'package:git_hubdemo/screens/all-in-one.dart';
 import 'package:git_hubdemo/widgets.dart/drawer.dart';
 import 'package:git_hubdemo/widgets.dart/item-widget.dart';
 
@@ -39,13 +40,7 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: ListView.builder(
-            itemCount: dummyList.length,
-            itemBuilder: (context, index) {
-              return ItemWidget(
-                item: dummyList[index],
-              );
-            }),
+        child: AllInOne(),
       ),
       drawer: const MyDrawer(),
     );
