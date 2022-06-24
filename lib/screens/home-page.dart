@@ -34,7 +34,7 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         centerTitle: true,
         title: const Text(
-          'Git Hub Demo',
+          'App Bar',
           style: TextStyle(color: Colors.black),
         ),
       ),
